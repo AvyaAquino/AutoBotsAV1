@@ -1,0 +1,320 @@
+{
+  "info": {
+    "name": "AutoBots automanager - ATVI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cliente",
+      "item": [
+        {
+          "name": "Listar",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/cliente/clientes",
+            "header": []
+          }
+        },
+        {
+          "name": "Buscar 1",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/cliente/1",
+            "header": []
+          }
+        },
+        {
+          "name": "Cadastrar",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/cliente/cadastro",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Maria da Silva\",\n  \"nomeSocial\": \"Maria\",\n  \"dataNascimento\": \"1990-04-12\",\n  \"documentos\": [\n    {\n      \"tipo\": \"CPF\",\n      \"numero\": \"12345678900\"\n    }\n  ],\n  \"telefones\": [\n    {\n      \"ddd\": \"12\",\n      \"numero\": \"999998888\"\n    }\n  ],\n  \"endereco\": {\n    \"estado\": \"SP\",\n    \"cidade\": \"São José dos Campos\",\n    \"bairro\": \"Centro\",\n    \"rua\": \"Rua Sete de Setembro\",\n    \"numero\": \"100\",\n    \"codigoPostal\": \"12210000\"\n  }\n}"
+            }
+          }
+        },
+        {
+          "name": "Atualizar",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8080/cliente/atualizar",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"nomeSocial\": \"Imperador\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Excluir",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/cliente/excluir",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 2\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Documento",
+      "item": [
+        {
+          "name": "Listar",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/documento/documentos",
+            "header": []
+          }
+        },
+        {
+          "name": "Buscar 1",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/documento/1",
+            "header": []
+          }
+        },
+        {
+          "name": "Do cliente 1",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/documento/cliente/1",
+            "header": []
+          }
+        },
+        {
+          "name": "Cadastrar no cliente 1",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/documento/cadastro/1",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tipo\": \"CNH\",\n  \"numero\": \"98765432100\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Atualizar",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8080/documento/atualizar",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"numero\": \"2500\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Excluir",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/documento/excluir",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Telefone",
+      "item": [
+        {
+          "name": "Listar",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/telefone/telefones",
+            "header": []
+          }
+        },
+        {
+          "name": "Buscar 1",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/telefone/1",
+            "header": []
+          }
+        },
+        {
+          "name": "Do cliente 1",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/telefone/cliente/1",
+            "header": []
+          }
+        },
+        {
+          "name": "Cadastrar no cliente 1",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/telefone/cadastro/1",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ddd\": \"11\",\n  \"numero\": \"912345678\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Atualizar",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8080/telefone/atualizar",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"ddd\": \"11\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Excluir",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/telefone/excluir",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Endereco",
+      "item": [
+        {
+          "name": "Listar",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/endereco/enderecos",
+            "header": []
+          }
+        },
+        {
+          "name": "Buscar 1",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/endereco/1",
+            "header": []
+          }
+        },
+        {
+          "name": "Do cliente 1",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/endereco/cliente/1",
+            "header": []
+          }
+        },
+        {
+          "name": "Atualizar",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8080/endereco/atualizar",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"bairro\": \"Leme\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Excluir",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/endereco/excluir",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Cadastrar no cliente 1 (após excluir)",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/endereco/cadastro/1",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"estado\": \"RJ\",\n  \"cidade\": \"Petrópolis\",\n  \"rua\": \"Rua da Imperatriz\",\n  \"numero\": \"220\"\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
